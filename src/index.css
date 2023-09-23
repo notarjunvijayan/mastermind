@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Josefin+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+
+body {
+  margin: 0;
+}
+.window{
+  margin: 0 5vw;
+  color: #dfd2bb;
+}
+p{
+  font-family: 'Lato';
+  font-size: 1.2rem;
+}
+h2{
+  font-family: 'Gilda Display';
+  font-size: 2rem;
+}
+.content{
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+.content h1{
+  font-family: 'Gilda Display';
+  font-size: 6rem;
+  color: #dfd2bb;
+  margin: 3vh 0;
+}
+.content p{
+  font-size: 1.5rem;
+  color: #ba9d6a;
+}
+.welcome{
+  height: 100vh;
+  text-align: end;
+  display: flex;
+  align-items: end;
+  padding:0 0 0 40rem;
+}
+.programs{
+  height: 100vh;
+  display: flex;
+  align-items: end;
+  padding: 0 40rem 0 0;
+}
+.advantages{
+  height: 100vh;
+  display: flex;
+  align-items: end;
+}
