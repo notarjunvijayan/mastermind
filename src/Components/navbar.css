@@ -1,0 +1,23 @@
+.navbar{
+    position: fixed;
+    z-index: 3;
+}
+.navbar ul{
+    display: flex;
+    list-style-type: none;
+    width: 88vw;
+    height: 10vh;
+    font-family: gotham;
+    align-items: center;
+    justify-content: center;
+}
+ul li{
+    padding:1vw;
+    font-size: 1.1rem;
+}
+ul h3{
+    font-family: lora;
+    margin: 0%;
+    padding-right: 48vw;
+    font-size: 1.7rem;
+}

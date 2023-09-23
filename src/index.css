@@ -1,20 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Gilda+Display&family=Josefin+Slab&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Roboto&display=swap');
+@font-face {
+  font-family: gotham;
+  src: url('/public/fonts/Gotham\ Rounded\ Medium.otf');
+}
+@font-face {
+  font-family: lora;
+  src: url('/public/fonts/Lora-VariableFont_wght.ttf');
+}
+@font-face {
+  font-family: circular;
+  src: url('/public/fonts/Circular/CircularStd-Medium.otf');
+}
 
 body {
   margin: 0;
 }
 .window{
   margin: 0 5vw;
-  color: #dfd2bb;
+  color: #94d2bd;
 }
 p{
-  font-family: 'Lato';
+  font-family: gotham;
   font-size: 1.2rem;
 }
 h2{
-  font-family: 'Gilda Display';
-  font-size: 2rem;
+  font-family: lora;
+  font-size: 4rem;
+  color: #e9d8a6;
 }
 .content{
   width: 90vw;
@@ -25,14 +36,15 @@ h2{
   text-align: center;
 }
 .content h1{
-  font-family: 'Gilda Display';
-  font-size: 6rem;
+  font-family: lora;
+  font-size: 7.5rem;
   color: #dfd2bb;
   margin: 3vh 0;
 }
 .content p{
   font-size: 1.5rem;
-  color: #ba9d6a;
+  color: #ee9b00;
+  font-family: circular;
 }
 .welcome{
   height: 100vh;

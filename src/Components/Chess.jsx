@@ -3,6 +3,7 @@ import { OrbitControls, ScrollControls } from "@react-three/drei";
 import { Model } from "./Models/Queen";
 import { AmbientLight } from "three";
 import { Scroll } from "@react-three/drei";
+import Navbar from "./Navbar";
 
 export default function Chess() {
   return (
@@ -12,6 +13,7 @@ export default function Chess() {
         <Scroll>
           <Scroll html>
             <div className="window">
+            <Navbar/>
               <div className="content">
                 <div className="heading">
                   <h1>MASTERMIND</h1>
@@ -37,10 +39,12 @@ export default function Chess() {
                   <h2>Our Programs</h2>
                   <p>
                     Our chess programs cater to every level of expertise, from
-                    beginners to advanced players. Uncover the world of chess
-                    through interactive lessons, enriching your mind and
-                    enhancing problem-solving abilities. Join us to explore the
-                    art of chess.
+                    beginners to advanced players.
+                  </p>
+                  <p>
+                    Uncover the world of chess through interactive lessons,
+                    enriching your mind and enhancing problem-solving abilities.
+                    Join us to explore the art of chess.
                   </p>
                 </div>
               </div>
@@ -65,7 +69,7 @@ export default function Chess() {
           </Scroll>
         </Scroll>
       </ScrollControls>
-      <color attach="background" args={["#000000"]} />
+      <color attach="background" args={["#001219"]} />
       <ambientLight intensity={0.2} castShadow />
       <pointLight
         intensity={100}
@@ -75,7 +79,7 @@ export default function Chess() {
       />
       <pointLight
         intensity={100}
-        position={[40, 20, 10]}
+        position={[20, 5, 10]}
         castShadow
         color="#fff"
       />
