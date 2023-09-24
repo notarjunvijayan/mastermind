@@ -18,7 +18,7 @@ function App() {
   return (
     <div className="App">
       <Loadingscreen />
-      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio * 0.6} performance={{min:0.1}}camera={{ fov: 30, position: [25, 0, 20] }}>
+      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio * 0.6} performance={{min:0.5}}camera={{ fov: 30, position: [25, 0, 20] }}>
         <Suspense>
           <Chess></Chess>
           <EffectComposer>
