@@ -16,7 +16,7 @@ body {
 }
 .window{
   margin: 0 5vw;
-  color: #005b4c;
+  color: #bebebe;
   scroll-behavior: smooth;
 }
 p{
@@ -26,7 +26,7 @@ p{
 h2{
   font-family: lora;
   font-size: 4rem;
-  color: #353728;
+  color: #00a97f;
 }
 .content{
   width: 90vw;
@@ -39,7 +39,7 @@ h2{
 .content h1{
   font-family: lora;
   font-size: 7.5rem;
-  color: #353728;
+  color: #00a97f;
   margin: 3vh 0;
 }
 .content p{
@@ -92,8 +92,23 @@ h2{
   height: 100vh;
   text-align: end;
   display: flex;
-  align-items: start;
+  align-items: center;
   justify-content: end;
+  padding: 0 0 0 30vw;
+}
+form{
+  font-family: circular;
+}
+input{
+  background-color: #bebebe;
+  border: 1px solid black;
+  color: #005b4c;
+  margin: 1.5rem 1rem;
+  height: 2rem;
+  width: 30vw;
+  font-family: circular;
+  font-size: 1rem;
+  padding: 0 0.5rem;
 }
 
 @media screen and (max-width:768px) {

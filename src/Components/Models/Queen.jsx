@@ -13,6 +13,7 @@ import gsap from 'gsap'
 import { useFrame, useLoader, useThree} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import './queen.css'
+import Navbar from '../Navbar'
 export const FLOOR_HEIGHT = 3
 export const NB_FLOORS = 3
 
@@ -25,7 +26,6 @@ export function Model(props) {
   const chess = useRef()
   const scroll = useScroll()
   
-  const {viewport} = useThree()
   const isMobile = window.innerWidth < 768;
   
   if(isMobile){
@@ -56,7 +56,7 @@ export function Model(props) {
     <>
     <mesh position={[9.5,0,9]} rotation={[0,0.90,0]} scale={25} matrixWorldAutoUpdate={false}>
       <planeGeometry/>
-      <meshLambertMaterial color='#e3e5d2'/>
+      <meshPhysicalMaterial color='#171716' metalness={0.25} roughness={0.9}/>
     </mesh>
     <group {...props} dispose={null} ref={ref}>
       <mesh ref={chess} geometry={nodes.queen_copy19_lambert4_0.geometry} material={materials.lambert4} position={[ 10,-6.5,13]} rotation={[-Math.PI / 2, 0, 0]} scale={2} />

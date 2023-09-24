@@ -1,26 +1,20 @@
-import { Canvas } from "@react-three/fiber";
-import { Loader, OrbitControls, ScrollControls } from "@react-three/drei";
+import { ScrollControls } from "@react-three/drei";
 import { Model } from "./Models/Queen";
-import { AmbientLight } from "three";
 import { Scroll } from "@react-three/drei";
-import Navbar from "./Navbar";
 import book from "./book.svg";
 import coach from "./mentor.svg";
 import brain from "./brain.svg";
 import interact from "./connection.svg";
-import { Suspense } from "react";
-import { LookupTexture, Vignette } from "@react-three/postprocessing";
-import { BlendFunction } from 'postprocessing'
+
 
 export default function Chess() {
   return (
     <>
-      <ScrollControls pages={5.5} damping={0.25}>
+      <ScrollControls pages={6} damping={0.25}>
         <Model></Model>
         <Scroll>
           <Scroll html>
             <div className="window">
-              <Navbar />
               <div className="content">
                 <div className="heading">
                   <h1>MASTERMIND</h1>
@@ -99,9 +93,22 @@ export default function Chess() {
                 </div>
               </div>
               <div className="join">
-                <div>
-                  <h2>Join</h2>
-                  <p>Join Mastermind Today</p>
+                <div className="join-content">
+                  <h2>Join Mastermind Chess Academy Today!</h2>
+                  <p>
+                    Begin your chess journey by taking the first step with us
+                  </p>
+
+                  <form
+                    action="https://getform.io/f/e5778e65-9745-4ae9-acde-d8c0ecff1dce"
+                    method="POST"
+                  >
+                    <input type="text" placeholder='Name' name="name" required="" /><br/>
+                    <input type="email" name="email" placeholder='Email' required="" /><br/>
+                    <input type="tel" name="phone" placeholder="Phone" required="" /><br/>
+
+                    <input type="submit" value="Submit" />
+                  </form>
                 </div>
               </div>
             </div>
