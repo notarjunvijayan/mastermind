@@ -35,8 +35,11 @@ export function Model(props) {
     .to(ref.current.rotation, {y:-1.5},2)
     .to(ref.current.position,{x:22,y:0,z:-10},2)
 
-    .to(ref.current.rotation, {y:-1.5},3)
-    .to(ref.current.position,{x:25,y:0,z:-10},3)
+    .to(ref.current.rotation, {y:-2.5},3)
+    .to(ref.current.position,{x:37,y:0,z:9},3)
+
+    .to(ref.current.rotation, {y:-2.5},4)
+    .to(ref.current.position,{x:37,y:0,z:9},4)
   },[])
 
   return (

@@ -2,6 +2,13 @@
     position: fixed;
     z-index: 3;
 }
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 5rem;
+}
 .navbar ul{
     display: flex;
     list-style-type: none;
@@ -12,12 +19,16 @@
     justify-content: center;
 }
 ul li{
-    padding:1vw;
+    padding-right:2vw;
     font-size: 1.1rem;
 }
 ul h3{
     font-family: lora;
     margin: 0%;
-    padding-right: 48vw;
-    font-size: 1.7rem;
+    padding-right: 45vw;
+    font-size: 1.5rem;
+}
+a{
+    text-decoration: none;
+    color: #94d2bd;
 }

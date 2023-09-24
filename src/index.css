@@ -17,6 +17,7 @@ body {
 .window{
   margin: 0 5vw;
   color: #94d2bd;
+  scroll-behavior: smooth;
 }
 p{
   font-family: gotham;
@@ -57,10 +58,32 @@ h2{
   height: 100vh;
   display: flex;
   align-items: end;
-  padding: 0 40rem 0 0;
+  padding: 0 40rem 10rem 0;
 }
 .advantages{
   height: 100vh;
   display: flex;
-  align-items: end;
+  align-items: center;
+  padding: 0 40rem 0 0;
+  text-align: center;
+}
+.advantages h3{
+  font-family: gotham;
+  font-size: 1.2rem;
+  color: #0a9396;
+}
+.advantages p{
+  font-size: 1rem;
+}
+.advantages-container{
+  display:flex;
+}
+.advantage{
+  width: 20vw;
+  height: 25vh;
+  text-align: center;
+  padding: 1rem;
+}
+.join{
+  height: 100vh;
 }

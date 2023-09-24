@@ -8,12 +8,12 @@ import Navbar from "./Navbar";
 export default function Chess() {
   return (
     <>
-      <ScrollControls pages={4} damping={0.25}>
+      <ScrollControls pages={5} damping={0.25}>
         <Model></Model>
         <Scroll>
           <Scroll html>
             <div className="window">
-            <Navbar/>
+              <Navbar />
               <div className="content">
                 <div className="heading">
                   <h1>MASTERMIND</h1>
@@ -34,7 +34,7 @@ export default function Chess() {
                   </p>
                 </div>
               </div>
-              <div className="programs">
+              <div className="programs" id='programs'>
                 <div>
                   <h2>Our Programs</h2>
                   <p>
@@ -51,12 +51,40 @@ export default function Chess() {
               <div className="advantages">
                 <div>
                   <h2>Advantages</h2>
-                  <p>
-                    Learn from seasoned chess professionals dedicated to
-                    nurturing your potential. Our coaches provide individualized
-                    attention, fostering growth and confidence in players of all
-                    ages.
-                  </p>
+                  <div className="advantages-container">
+                    <div className="advantage">
+                      <h3>Expert Coaches</h3>
+                      <p>
+                        Learn from seasoned chess professionals dedicated to
+                        nurturing your potential.
+                      </p>
+                    </div>
+                    <div className="advantage">
+                      <h3>Personalized Learning</h3>
+                      <p>
+                        Our one-on-one sessions empower you to grasp chess
+                        strategies while building valuable life skills.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="advantages-container">
+                  <div className="advantage">
+                      <h3>Comprehensive Curriculum</h3>
+                      <p>
+                        Discover a structured curriculum that takes you from
+                        chess basics to advanced techniques
+                      </p>
+                    </div>
+                    <div className="advantage">
+                      <h3>Interactive Experience</h3>
+                      <p>
+                        Engage in real-time learning with our interactive
+                        platform. Ask questions, analyze games, and receive
+                        instant feedback, all while enjoying the thrill of
+                        chess.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className="Join">
