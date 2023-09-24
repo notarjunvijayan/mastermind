@@ -18,16 +18,16 @@ function App() {
   return (
     <div className="App">
       <Loadingscreen />
-      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio} camera={{ fov: 30, position: [25, 0, 20] }}>
+      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio * 0.6} performance={{min:0.1}}camera={{ fov: 30, position: [25, 0, 20] }}>
         <Suspense>
           <Chess></Chess>
           <EffectComposer>
             <Bloom
-              intensity={0.25} // The bloom intensity.
+              intensity={0.2} // The bloom intensity.
               blurPass={undefined} // A blur pass.
               kernelSize={KernelSize.LARGE} // blur kernel size
               luminanceThreshold={0.9} // luminance threshold. Raise this value to mask out darker elements in the scene.
-              luminanceSmoothing={0.25} // smoothness of the luminance threshold. Range is [0, 1]
+              luminanceSmoothing={0.5} // smoothness of the luminance threshold. Range is [0, 1]
               mipmapBlur={false} // Enables or disables mipmap blur.
               resolutionX={Resolution.AUTO_SIZE} // The horizontal resolution.
               resolutionY={Resolution.AUTO_SIZE} // The vertical resolution.
