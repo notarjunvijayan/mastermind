@@ -10,12 +10,13 @@ Title: Chess Piece Queen
 import React, { useLayoutEffect, useRef } from 'react'
 import { useGLTF, useScroll } from '@react-three/drei'
 import gsap from 'gsap'
-import { useFrame } from '@react-three/fiber'
+import { useFrame, useLoader } from '@react-three/fiber'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 export const FLOOR_HEIGHT = 3
 export const NB_FLOORS = 3
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF('/queen.glb')
+  const { nodes, materials } = useLoader(GLTFLoader,'/queen.glb')
   
   const ref = useRef()
   const tl = useRef()

@@ -9,8 +9,7 @@ import {
   HueSaturation,
   Bloom,
   DepthOfField,
-  FXAA,
-  SMAA
+  SMAA,
 } from "@react-three/postprocessing";
 
 import { BlendFunction, KernelSize, Resolution } from "postprocessing";
@@ -19,11 +18,11 @@ function App() {
   return (
     <div className="App">
       <Loadingscreen />
-      <Canvas camera={{ fov: 30, position: [25, 0, 20] }}>
+      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio} camera={{ fov: 30, position: [25, 0, 20] }}>
         <Suspense>
           <Chess></Chess>
           <EffectComposer>
-          <Bloom
+            <Bloom
               intensity={0.25} // The bloom intensity.
               blurPass={undefined} // A blur pass.
               kernelSize={KernelSize.LARGE} // blur kernel size
@@ -49,7 +48,6 @@ function App() {
               hue={0} // hue in radians
               saturation={0.6} // saturation in radians
             />
-            <SMAA/>
           </EffectComposer>
         </Suspense>
       </Canvas>
