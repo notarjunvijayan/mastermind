@@ -16,7 +16,7 @@ body {
 }
 .window{
   margin: 0 5vw;
-  color: #94d2bd;
+  color: #005b4c;
   scroll-behavior: smooth;
 }
 p{
@@ -26,7 +26,7 @@ p{
 h2{
   font-family: lora;
   font-size: 4rem;
-  color: #e9d8a6;
+  color: #353728;
 }
 .content{
   width: 90vw;
@@ -39,12 +39,12 @@ h2{
 .content h1{
   font-family: lora;
   font-size: 7.5rem;
-  color: #dfd2bb;
+  color: #353728;
   margin: 3vh 0;
 }
 .content p{
   font-size: 1.5rem;
-  color: #ee9b00;
+  color: #95792b;
   font-family: circular;
 }
 .welcome{
@@ -57,11 +57,11 @@ h2{
 .programs{
   height: 100vh;
   display: flex;
-  align-items: end;
-  padding: 0 40rem 10rem 0;
+  align-items: center;
+  padding: 20rem 40rem 0 0;
 }
 .advantages{
-  height: 100vh;
+  height: 150vh;
   display: flex;
   align-items: center;
   padding: 0 40rem 0 0;
@@ -69,21 +69,29 @@ h2{
 }
 .advantages h3{
   font-family: gotham;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: #0a9396;
 }
+.advantages img{
+  width: 5vw;
+  padding: 0.5rem;
+}
 .advantages p{
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 .advantages-container{
   display:flex;
 }
 .advantage{
-  width: 20vw;
-  height: 25vh;
+  width: 22vw;
+  height: 35vh;
   text-align: center;
   padding: 1rem;
 }
 .join{
   height: 100vh;
+  text-align: end;
+  display: flex;
+  align-items: start;
+  justify-content: end;
 }

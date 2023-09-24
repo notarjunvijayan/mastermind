@@ -1,0 +1,31 @@
+.loader{
+    background-color: #e3e5d2;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    text-align: center;
+}
+.loader h1{
+    margin: 0%;
+    font-family: lora;
+    font-size: 4rem;
+    color: #353728;
+}
+.loader p{
+    font-family: circular;
+    color:#95792b;
+}
+.loader h2{
+    font-size: 1.5rem;
+    font-family: gotham;
+    color: #353728;
+    margin-top: 10rem;
+}
+.loader img{
+    width:15vw;
+}

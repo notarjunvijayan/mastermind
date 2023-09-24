@@ -1,15 +1,20 @@
 import { Canvas } from "@react-three/fiber";
-import { OrbitControls, ScrollControls } from "@react-three/drei";
+import { Loader, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Model } from "./Models/Queen";
 import { AmbientLight } from "three";
 import { Scroll } from "@react-three/drei";
 import Navbar from "./Navbar";
+import book from "./book.svg";
+import coach from "./mentor.svg";
+import brain from "./brain.svg";
+import interact from "./connection.svg";
+import { Suspense } from "react";
 
 export default function Chess() {
   return (
     <>
-      <ScrollControls pages={5} damping={0.25}>
-        <Model></Model>
+      <ScrollControls pages={5.5} damping={0.25}>
+          <Model></Model>
         <Scroll>
           <Scroll html>
             <div className="window">
@@ -34,7 +39,7 @@ export default function Chess() {
                   </p>
                 </div>
               </div>
-              <div className="programs" id='programs'>
+              <div className="programs" id="programs">
                 <div>
                   <h2>Our Programs</h2>
                   <p>
@@ -53,6 +58,7 @@ export default function Chess() {
                   <h2>Advantages</h2>
                   <div className="advantages-container">
                     <div className="advantage">
+                      <img src={coach} />
                       <h3>Expert Coaches</h3>
                       <p>
                         Learn from seasoned chess professionals dedicated to
@@ -60,6 +66,7 @@ export default function Chess() {
                       </p>
                     </div>
                     <div className="advantage">
+                      <img src={brain} />
                       <h3>Personalized Learning</h3>
                       <p>
                         Our one-on-one sessions empower you to grasp chess
@@ -68,7 +75,8 @@ export default function Chess() {
                     </div>
                   </div>
                   <div className="advantages-container">
-                  <div className="advantage">
+                    <div className="advantage">
+                      <img src={book} />
                       <h3>Comprehensive Curriculum</h3>
                       <p>
                         Discover a structured curriculum that takes you from
@@ -76,6 +84,7 @@ export default function Chess() {
                       </p>
                     </div>
                     <div className="advantage">
+                      <img src={interact} />
                       <h3>Interactive Experience</h3>
                       <p>
                         Engage in real-time learning with our interactive
@@ -87,7 +96,7 @@ export default function Chess() {
                   </div>
                 </div>
               </div>
-              <div className="Join">
+              <div className="join">
                 <div>
                   <h2>Join</h2>
                   <p>Join Mastermind Today</p>
@@ -97,23 +106,22 @@ export default function Chess() {
           </Scroll>
         </Scroll>
       </ScrollControls>
-      <color attach="background" args={["#001219"]} />
-      <ambientLight intensity={0.2} castShadow />
+      <ambientLight intensity={0.4} castShadow />
       <pointLight
         intensity={100}
-        position={[20, 15, 10]}
+        position={[30, -10, 10]}
         castShadow
         color="#fff"
       />
       <pointLight
         intensity={100}
-        position={[20, 5, 10]}
+        position={[10, 0, 18]}
         castShadow
         color="#fff"
       />
       <pointLight
         intensity={100}
-        position={[20, 10, 20]}
+        position={[18, 6, 7]}
         castShadow
         color="#fff"
       />
