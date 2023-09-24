@@ -5,6 +5,7 @@ import book from "./book.svg";
 import coach from "./mentor.svg";
 import brain from "./brain.svg";
 import interact from "./connection.svg";
+import logo from './logo.png'
 
 
 export default function Chess() {
@@ -17,12 +18,13 @@ export default function Chess() {
             <div className="window">
               <div className="content">
                 <div className="heading">
+                  <img src={logo}/>
                   <h1>MASTERMIND</h1>
                   <p>Chess Academy</p>
                 </div>
               </div>
               <div className="welcome">
-                <div>
+                <div className="welcome-text">
                   <h2>Welcome to Mastermind Chess Academy</h2>
                   <p>
                     Elevate your chess skills with Mastermind Chess Academy.

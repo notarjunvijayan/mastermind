@@ -11,6 +11,11 @@
   src: url('/public/fonts/Circular/CircularStd-Medium.otf');
 }
 
+.heading img{
+  width: 20vw;
+  margin: 0%;
+  margin-bottom: -10vh;
+}
 body {
   margin: 0;
 }
@@ -38,7 +43,7 @@ h2{
 }
 .content h1{
   font-family: lora;
-  font-size: 7.5rem;
+  font-size: 7rem;
   color: #00a97f;
   margin: 3vh 0;
 }
@@ -112,6 +117,14 @@ input{
 }
 
 @media screen and (max-width:768px) {
+  .window{
+    margin-left: 0;
+    width: 100vw;
+  }
+  .heading img{
+    width:50vw;
+    margin-bottom:-5vh;
+  }
   h2{
     font-size: 2rem;
   }
@@ -125,10 +138,13 @@ input{
     width:100vw;
   }
   .welcome{
-    width: 100vw;
+    width: 90vw;
     text-align: center;
     justify-content: center;
-    margin: 0%
+    padding: 0 5vw;
+  }
+  .welcome p{
+    width: 90vw;
   }
   .programs{
     width: 100vw;
@@ -153,5 +169,17 @@ input{
   }
   .advantage p{
     width: 40vw;
+  }
+  .join{
+    width: 90vw;
+    padding: 0 5vw;
+    margin: 0%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  input{
+    margin: 0.5rem 0;
+    width: 60vw;
   }
 }

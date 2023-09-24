@@ -13,7 +13,6 @@ import gsap from 'gsap'
 import { useFrame, useLoader, useThree} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
 import './queen.css'
-import Navbar from '../Navbar'
 export const FLOOR_HEIGHT = 3
 export const NB_FLOORS = 3
 
