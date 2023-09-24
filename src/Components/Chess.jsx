@@ -1,20 +1,18 @@
 import { Canvas } from "@react-three/fiber";
 import { Loader, OrbitControls, ScrollControls } from "@react-three/drei";
 import { Model } from "./Models/Queen";
-import { AmbientLight } from "three";
 import { Scroll } from "@react-three/drei";
 import Navbar from "./Navbar";
 import book from "./book.svg";
 import coach from "./mentor.svg";
 import brain from "./brain.svg";
 import interact from "./connection.svg";
-import { Suspense } from "react";
 
 export default function Chess() {
   return (
     <>
       <ScrollControls pages={5.5} damping={0.25}>
-          <Model></Model>
+        <Model></Model>
         <Scroll>
           <Scroll html>
             <div className="window">
@@ -106,23 +104,20 @@ export default function Chess() {
           </Scroll>
         </Scroll>
       </ScrollControls>
-      <ambientLight intensity={0.4} castShadow />
+      <ambientLight intensity={0.4} />
       <pointLight
         intensity={100}
         position={[30, -10, 10]}
-        castShadow
         color="#fff"
       />
       <pointLight
         intensity={100}
         position={[10, 0, 18]}
-        castShadow
         color="#fff"
       />
       <pointLight
         intensity={100}
         position={[18, 6, 7]}
-        castShadow
         color="#fff"
       />
     </>

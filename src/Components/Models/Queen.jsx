@@ -44,7 +44,7 @@ export function Model(props) {
 
   return (
     <>
-    <mesh position={[9.5,0,9]} rotation={[0,0.90,0]} scale={25}>
+    <mesh position={[9.5,0,9]} rotation={[0,0.90,0]} scale={25} matrixWorldAutoUpdate={false}>
       <planeGeometry/>
       <meshStandardMaterial color='#e3e5d2'/>
     </mesh>
