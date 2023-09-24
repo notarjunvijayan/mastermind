@@ -10,18 +10,27 @@ Title: Chess Piece Queen
 import React, { useLayoutEffect, useRef } from 'react'
 import { useGLTF, useScroll } from '@react-three/drei'
 import gsap from 'gsap'
-import { useFrame, useLoader } from '@react-three/fiber'
+import { useFrame, useLoader, useThree} from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader'
+import './queen.css'
 export const FLOOR_HEIGHT = 3
 export const NB_FLOORS = 3
+
 
 export function Model(props) {
   const { nodes, materials } = useLoader(GLTFLoader,'/queen.glb')
   
   const ref = useRef()
   const tl = useRef()
+  const chess = useRef()
   const scroll = useScroll()
-
+  
+  const {viewport} = useThree()
+  const isMobile = window.innerWidth < 768;
+  
+  if(isMobile){
+    chess.visible = false
+  }
   useFrame((state,delta)=>{
     tl.current.seek(scroll.offset * tl.current.duration())
   })
@@ -50,7 +59,7 @@ export function Model(props) {
       <meshLambertMaterial color='#e3e5d2'/>
     </mesh>
     <group {...props} dispose={null} ref={ref}>
-      <mesh geometry={nodes.queen_copy19_lambert4_0.geometry} material={materials.lambert4} position={[10,-6.5,13]} rotation={[-Math.PI / 2, 0, 0]} scale={2} />
+      <mesh ref={chess} geometry={nodes.queen_copy19_lambert4_0.geometry} material={materials.lambert4} position={[ 10,-6.5,13]} rotation={[-Math.PI / 2, 0, 0]} scale={2} />
     </group>
     </>
   )

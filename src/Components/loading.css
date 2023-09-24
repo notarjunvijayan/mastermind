@@ -29,3 +29,15 @@
 .loader img{
     width:15vw;
 }
+
+@media screen and (max-width:768px) {
+    .loader{
+        width: 100vw;
+    }
+    .loader img{
+        width:40vw;
+    }
+    .loader h1{
+        font-size: 2.5rem;
+    }
+}

@@ -95,3 +95,48 @@ h2{
   align-items: start;
   justify-content: end;
 }
+
+@media screen and (max-width:768px) {
+  h2{
+    font-size: 2rem;
+  }
+  p{
+    font-size: 1rem;
+    width: 20rem;
+  }
+  .content{
+    justify-content: center;
+    text-align: center;
+    width:100vw;
+  }
+  .welcome{
+    width: 100vw;
+    text-align: center;
+    justify-content: center;
+    margin: 0%
+  }
+  .programs{
+    width: 100vw;
+    justify-content: center;
+    text-align: center;
+  }
+  .content h1{
+    font-size: 3rem;
+    text-align: center;
+  }
+  .advantages{
+    justify-content: center;
+    text-align: center;
+    padding: 0%;
+    width: 100vw;
+  }
+  .advantage img{
+    width: 15vw;
+  }
+  .advantage{
+    width: 40vw;
+  }
+  .advantage p{
+    width: 40vw;
+  }
+}

@@ -32,3 +32,30 @@ a{
     text-decoration: none;
     color: #464838;
 }
+
+@media screen and (max-width:768px) {
+    .window{
+        margin-left: 0;
+    }
+    .navbar{
+        height: 20vh;
+        width: 90vw;
+        margin-left: 10vw;
+    }
+    .logo{
+        height: 25vh;
+        width: 100vw;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .navbar ul{
+        justify-content: center;
+        align-items:center ;
+        flex-direction: column;
+        padding: 0%;
+    }
+    ul li{
+        font-size: 1rem;
+    }
+}
