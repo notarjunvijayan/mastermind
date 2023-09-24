@@ -110,10 +110,20 @@ input{
   color: #005b4c;
   margin: 1.5rem 1rem;
   height: 2rem;
-  width: 30vw;
+  width: 30rem;
   font-family: circular;
   font-size: 1rem;
   padding: 0 0.5rem;
+}
+.submit{
+  background-color: #00a97f;
+  width: 25rem;
+}
+.button{
+  width: 31rem;
+  margin-left: 25vw;
+  justify-content: end;
+  display: flex;
 }
 
 @media screen and (max-width:768px) {
@@ -178,8 +188,20 @@ input{
     align-items: center;
     text-align: center;
   }
+  .join p{
+    width: 90vw;
+    padding: 0 5vw;
+  }
   input{
     margin: 0.5rem 0;
+    width: 60vw;
+  }
+  .button{
+    width: 100vw;
+    justify-content: center;
+    margin: 0%;
+  }
+  .submit{
     width: 60vw;
   }
 }

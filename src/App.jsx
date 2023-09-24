@@ -7,19 +7,16 @@ import {
   EffectComposer,
   Vignette,
   HueSaturation,
-  Bloom,
   DepthOfField,
-  SMAA,
 } from "@react-three/postprocessing";
 
-import { BlendFunction, KernelSize, Resolution } from "postprocessing";
+import { BlendFunction } from "postprocessing";
 
 function App() {
   return (
     <div className="App">
-      <Loadingscreen />
       <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio * 0.6} performance={{min:0.5}}camera={{ fov: 30, position: [25, 0, 20] }}>
-        <Suspense>
+        <Suspense fallback={<Loadingscreen/>}>
           <Chess></Chess>
           <EffectComposer>
             <DepthOfField

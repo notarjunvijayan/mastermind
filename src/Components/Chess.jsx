@@ -108,8 +108,9 @@ export default function Chess() {
                     <input type="text" placeholder='Name' name="name" required="" /><br/>
                     <input type="email" name="email" placeholder='Email' required="" /><br/>
                     <input type="tel" name="phone" placeholder="Phone" required="" /><br/>
-
-                    <input type="submit" value="Submit" />
+                    <div className="button">
+                      <input className='submit' type="submit" value="Submit" />
+                    </div>
                   </form>
                 </div>
               </div>
