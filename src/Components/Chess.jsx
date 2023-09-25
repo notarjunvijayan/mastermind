@@ -118,25 +118,10 @@ export default function Chess() {
           </Scroll>
         </Scroll>
       </ScrollControls>
-      <ambientLight intensity={0.4} castShadow />
-      <pointLight
-        intensity={100}
-        position={[30, -10, 10]}
-        castShadow
-        color="#fff"
-      />
-      <pointLight
-        intensity={100}
-        position={[10, 0, 18]}
-        castShadow
-        color="#fff"
-      />
-      <pointLight
-        intensity={100}
-        position={[18, 6, 7]}
-        castShadow
-        color="#fff"
-      />
+      <ambientLight/>
+      <directionalLight intensity={0.5} position={[20,2,7]}/>
+      <pointLight intensity={100} position={[20,5,15]}/>
+      <directionalLight intensity={1} position={[15,-7,25]}/>
     </>
   );
 }

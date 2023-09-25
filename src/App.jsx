@@ -7,7 +7,6 @@ import {
   EffectComposer,
   Vignette,
   HueSaturation,
-  DepthOfField,
 } from "@react-three/postprocessing";
 
 import { BlendFunction } from "postprocessing";
@@ -15,15 +14,15 @@ import { BlendFunction } from "postprocessing";
 function App() {
   return (
     <div className="App">
-      <Canvas gl={{ antialias: false }} pixelRatio={window.devicePixelRatio * 0.6} performance={{min:0.5}}camera={{ fov: 30, position: [25, 0, 20] }}>
-        <Suspense fallback={<Loadingscreen/>}>
+      <Canvas
+        gl={{ antialias: false }}
+        pixelRatio={window.devicePixelRatio * 0.6}
+        performance={{ min: 0.5 }}
+        camera={{ fov: 30, position: [25, 0, 20] }}
+      >
+        <Suspense fallback={<Loadingscreen />}>
           <Chess></Chess>
           <EffectComposer>
-            <DepthOfField
-              focusDistance={0} // where to focus
-              focalLength={0.02} // focal length
-              bokehScale={1.5} // bokeh size
-            />
             <Vignette
               offset={0.1} // vignette offset
               darkness={0.3} // vignette darkness
@@ -33,7 +32,7 @@ function App() {
             <HueSaturation
               blendFunction={BlendFunction.NORMAL} // blend mode
               hue={0} // hue in radians
-              saturation={0.6} // saturation in radians
+              saturation={0.25} // saturation in radians
             />
           </EffectComposer>
         </Suspense>

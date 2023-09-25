@@ -1,18 +1,20 @@
 import "./loading.css";
 import logo from "./logo.png";
 import { Html, useProgress } from "@react-three/drei";
+import {motion} from 'framer-motion'
 
 export default function Loadingscreen() {
+  const progress = useProgress()
   return (
     <Html>
-      <div className="loader">
+      <motion.div className="loader">
         <div>
           <img src={logo} />
           <h1>MASTERMIND</h1>
           <p>Chess Academy</p>
-          <h2>Loading</h2>
+          <p>Loading {progress.progress.toFixed()}%</p>
         </div>
-      </div>
+      </motion.div>
     </Html>
   );
 }

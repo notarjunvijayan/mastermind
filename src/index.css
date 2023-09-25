@@ -10,6 +10,11 @@
   font-family: circular;
   src: url('/public/fonts/Circular/CircularStd-Medium.otf');
 }
+@font-face {
+  font-family: mastermind;
+  src: url('/public/fonts/ProvanFormal-Light.otf');
+}
+@import url(https://db.onlinewebfonts.com/c/ad230925aac0325de699bf05b6bdfa0c?family=LTC+Record+Title+W00+Regular); 
 
 .heading img{
   width: 20vw;
@@ -21,7 +26,7 @@ body {
 }
 .window{
   margin: 0 5vw;
-  color: #bebebe;
+  color: #675d4e;
   scroll-behavior: smooth;
 }
 p{
@@ -29,41 +34,43 @@ p{
   font-size: 1.2rem;
 }
 h2{
-  font-family: lora;
+  font-family:'LTC Record Title W00 Regular';
   font-size: 4rem;
-  color: #00a97f;
+  color: #353728;
 }
 .content{
   width: 90vw;
   height: 100vh;
+  padding-left: 5rem;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
 }
 .content h1{
-  font-family: lora;
+  font-family: mastermind;
   font-size: 7rem;
-  color: #00a97f;
+  color: #353728;
   margin: 3vh 0;
 }
 .content p{
   font-size: 1.5rem;
   color: #95792b;
-  font-family: circular;
+  font-family: 'LTC Record Title W00 Regular';
 }
 .welcome{
   height: 100vh;
   text-align: end;
   display: flex;
   align-items: end;
-  padding:0 0 0 40rem;
+  padding-right: 5vw;
+  padding-left: 40vw;
 }
 .programs{
   height: 100vh;
   display: flex;
   align-items: center;
-  padding: 20rem 40rem 0 0;
+  padding: 20rem 50vw 0 0;
 }
 .advantages{
   height: 150vh;
@@ -99,15 +106,15 @@ h2{
   display: flex;
   align-items: center;
   justify-content: end;
-  padding: 0 0 0 30vw;
+  padding: 0 5vw 0 30vw;
 }
 form{
   font-family: circular;
 }
 input{
-  background-color: #bebebe;
+  background-color: rgb(225, 205, 181);
   border: 1px solid black;
-  color: #005b4c;
+  color: #675d4e;
   margin: 1.5rem 1rem;
   height: 2rem;
   width: 30rem;
@@ -116,8 +123,16 @@ input{
   padding: 0 0.5rem;
 }
 .submit{
-  background-color: #00a97f;
+  background-color: #353728;
+  color: rgb(225, 205, 181);
   width: 25rem;
+}
+.submit:hover{
+  cursor: pointer;
+}
+input:focus{
+  outline: none;
+  border: 2px solid black;
 }
 .button{
   width: 31rem;
@@ -146,6 +161,7 @@ input{
     justify-content: center;
     text-align: center;
     width:100vw;
+    padding: 0%;
   }
   .welcome{
     width: 90vw;

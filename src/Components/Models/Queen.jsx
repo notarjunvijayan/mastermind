@@ -46,7 +46,7 @@ export function Model(props) {
     <>
     <mesh position={[9.5,0,9]} rotation={[0,0.90,0]} scale={25} matrixWorldAutoUpdate={false}>
       <planeGeometry/>
-      <meshPhysicalMaterial color='#171716' metalness={0.25} roughness={0.9}/>
+      <meshPhysicalMaterial color='#faebd7' metalness={0.25} roughness={0.9}/>
     </mesh>
     <group {...props} dispose={null} ref={ref}>
       <mesh ref={chess} geometry={nodes.queen_copy19_lambert4_0.geometry} material={materials.lambert4} position={[ 10,-6.5,13]} rotation={[-Math.PI / 2, 0, 0]} scale={2} />
