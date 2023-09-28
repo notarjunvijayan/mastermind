@@ -3,6 +3,7 @@ import "./App.css";
 import Chess from "./Components/Chess";
 import { Suspense } from "react";
 import Loadingscreen from "./Components/Loadingscreen";
+import { Shadow } from "@react-three/drei";
 import {
   EffectComposer,
   Vignette,
@@ -16,16 +17,17 @@ function App() {
     <div className="App">
       <Canvas
         gl={{ antialias: false }}
-        pixelRatio={window.devicePixelRatio * 0.6}
         performance={{ min: 0.5 }}
         camera={{ fov: 30, position: [25, 0, 20] }}
+        shadows
+        colorManagement
       >
         <Suspense fallback={<Loadingscreen />}>
           <Chess></Chess>
           <EffectComposer>
             <Vignette
-              offset={0.1} // vignette offset
-              darkness={0.3} // vignette darkness
+              offset={0.3} // vignette offset
+              darkness={0.5} // vignette darkness
               eskil={false} // Eskil's vignette technique
               blendFunction={BlendFunction.NORMAL} // blend mode
             />

@@ -63,8 +63,12 @@ h2{
   text-align: end;
   display: flex;
   align-items: end;
-  padding-right: 5vw;
-  padding-left: 40vw;
+  padding-right: 5vh;
+  justify-content: end;
+}
+.welcome-text{
+  width:60vw;
+  text-align: end;
 }
 .programs{
   height: 100vh;
@@ -168,6 +172,10 @@ input:focus{
     text-align: center;
     justify-content: center;
     padding: 0 5vw;
+  }
+  .welcome-text{
+    width:100vw;
+    text-align: center;
   }
   .welcome p{
     width: 90vw;
