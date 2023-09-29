@@ -3,14 +3,14 @@ import { useFrame, useLoader } from "@react-three/fiber";
 import { Plane } from "@react-three/drei";
 
 export default function Planeboard() {
-  const [colorMap, aoMap, normalMap, dispMap, metalMap] = useLoader(
+  const [colorMap, aoMap, normalMap, dispMap, bumpMap] = useLoader(
     TextureLoader,
     [
       "/texturemap/WoodFlooringAshSuperWhite001_COL_2K.jpg",
       "/texturemap/WoodFlooringAshSuperWhite001_AO_2K.jpg",
       "/texturemap/WoodFlooringAshSuperWhite001_NRM_2K.png",
       "/texturemap/WoodFlooringAshSuperWhite001_DISP_2K.jpg",
-      "/texturemap/WoodFlooringAshSuperWhite001_REFL_2K.jpg",
+      "/texturemap/WoodFlooringAshSuperWhite001_BUMP_2K.jpg",
     ]
   );
 
@@ -30,8 +30,10 @@ export default function Planeboard() {
           aoMap={aoMap}
           normalMap={normalMap}
           displacementMap={dispMap}
+          bumpMap={bumpMap}
           color="#faebd7"
-          metalnessMap={metalMap}
+          metalness={0.35}
+          roughness={0.45}
         />
       </Plane>
     </group>
