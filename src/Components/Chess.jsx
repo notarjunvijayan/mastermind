@@ -5,8 +5,7 @@ import book from "./book.svg";
 import coach from "./mentor.svg";
 import brain from "./brain.svg";
 import interact from "./connection.svg";
-import logo from './logo.png'
-
+import logo from "./logo.png";
 
 export default function Chess() {
   return (
@@ -18,7 +17,7 @@ export default function Chess() {
             <div className="window">
               <div className="content">
                 <div className="heading">
-                  <img src={logo}/>
+                  <img src={logo} />
                   <h1>MASTERMIND</h1>
                   <p>Chess Academy</p>
                 </div>
@@ -105,24 +104,49 @@ export default function Chess() {
                     action="https://getform.io/f/e5778e65-9745-4ae9-acde-d8c0ecff1dce"
                     method="POST"
                   >
-                    <input type="text" placeholder='Name' name="name" required="" /><br/>
-                    <input type="email" name="email" placeholder='Email' required="" /><br/>
-                    <input type="tel" name="phone" placeholder="Phone" required="" /><br/>
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      name="name"
+                      required=""
+                    />
+                    <br />
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required=""
+                    />
+                    <br />
+                    <input
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone"
+                      required=""
+                    />
+                    <br />
                     <div className="button">
-                      <input className='submit' type="submit" value="Submit" />
+                      <input className="submit" type="submit" value="Submit" />
                     </div>
                   </form>
                 </div>
+              </div>
+              <div className="footer">
+                <footer>
+                  Product of Mastermind Chess Academy | Made By{" "}
+                  <a href="https://www.notarjunvijayan.me/">Arjun Vijayan</a>{" "}
+                  and <a href="#">Yadhu Krishnan A S</a>
+                </footer>
               </div>
             </div>
           </Scroll>
         </Scroll>
       </ScrollControls>
-      <ambientLight/>
-      <pointLight intensity={70} position={[25,0,15]} castShadow/>
-      <directionalLight intensity={0.5} position={[20,2,7]}/>
-      <pointLight intensity={100} position={[15,20,20]}/>
-      <directionalLight intensity={1} position={[15,-7,25]}/>
+      <ambientLight />
+      <pointLight intensity={70} position={[25, 0, 15]} castShadow />
+      <directionalLight intensity={0.5} position={[20, 2, 7]} />
+      <pointLight intensity={100} position={[15, 20, 20]} />
+      <directionalLight intensity={1} position={[15, -7, 25]} />
     </>
   );
 }
