@@ -29,6 +29,11 @@
 .loader img{
     width:15vw;
 }
+.loader .load-percent{
+    font-family: gotham;
+    margin-top: 15vh;
+    color: #353728;
+}
 
 @media screen and (max-width:768px) {
     .loader{

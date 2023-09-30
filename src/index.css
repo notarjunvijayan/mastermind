@@ -14,7 +14,10 @@
   font-family: mastermind;
   src: url('/public/fonts/ProvanFormal-Light.otf');
 }
-@import url(https://db.onlinewebfonts.com/c/ad230925aac0325de699bf05b6bdfa0c?family=LTC+Record+Title+W00+Regular); 
+@font-face {
+  font-family: ltc;
+  src: url('/public/fonts/LTC\ Record\ Title\ W00\ Regular/LTC.ttf');
+}
 
 .heading img{
   width: 20vw;
@@ -47,7 +50,7 @@ p{
   font-size: 1.2rem;
 }
 h2{
-  font-family:'LTC Record Title W00 Regular';
+  font-family:ltc;
   font-size: 4rem;
   color: #353728;
 }
@@ -69,7 +72,7 @@ h2{
 .content p{
   font-size: 1.5rem;
   color: #95792b;
-  font-family: 'LTC Record Title W00 Regular';
+  font-family: ltc;
 }
 .welcome{
   height: 100vh;
@@ -77,7 +80,7 @@ h2{
   display: flex;
   align-items: end;
   padding-right: 5vh;
-  justify-content: end;
+  justify-content: flex-end;
 }
 .welcome-text{
   width:60vw;
@@ -114,7 +117,7 @@ h2{
 .advantage{
   width: 22vw;
   height: 35vh;
-  text-align: center;
+  justify-content: center;
   padding: 1rem;
 }
 .join{
@@ -122,7 +125,7 @@ h2{
   text-align: end;
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: flex-end;
   padding: 0 5vw 0 30vw;
 }
 form{
@@ -154,7 +157,7 @@ input:focus{
 .button{
   width: 31rem;
   margin-left: 25vw;
-  justify-content: end;
+  justify-content: flex-end;
   display: flex;
 }
 

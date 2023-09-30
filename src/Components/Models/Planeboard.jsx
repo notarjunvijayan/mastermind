@@ -1,8 +1,27 @@
+import React, { useLayoutEffect, useRef } from "react";
 import { TextureLoader } from "three/src/loaders/TextureLoader";
 import { useFrame, useLoader } from "@react-three/fiber";
-import { Plane } from "@react-three/drei";
+import gsap from "gsap";
+import { Plane, useTexture, useScroll } from "@react-three/drei";
 
-export default function Planeboard() {
+export default function Planeboard(props) {
+  const ref = useRef();
+  const tl = useRef();
+  const scroll = useScroll();
+
+
+  //Animation
+  useFrame((state, delta) => {
+    tl.current.seek(scroll.offset * tl.current.duration());
+  });
+  useLayoutEffect(() => {
+    tl.current = gsap.timeline({
+      defaults: { duration: 10, ease: "power1.inOut" },
+    });
+    tl.current.to(ref.current.position, { y: 10 }, 1);
+  }, []);
+
+  //Texture Loading
   const [colorMap, aoMap, normalMap, dispMap, bumpMap] = useLoader(
     TextureLoader,
     [
@@ -14,9 +33,9 @@ export default function Planeboard() {
     ]
   );
 
-
+  //Return Background Component
   return (
-    <group>
+    <group ref={ref}>
       <Plane
         receiveShadow
         position={[-15, 0, -20]}
@@ -39,3 +58,10 @@ export default function Planeboard() {
     </group>
   );
 }
+
+//Texture Preload
+useTexture.preload("/texturemap/WoodFlooringAshSuperWhite001_COL_2K.jpg");
+useTexture.preload("/texturemap/WoodFlooringAshSuperWhite001_AO_2K.jpg");
+useTexture.preload("/texturemap/WoodFlooringAshSuperWhite001_NRM_2K.png");
+useTexture.preload("/texturemap/WoodFlooringAshSuperWhite001_DISP_2K.jpg");
+useTexture.preload("/texturemap/WoodFlooringAshSuperWhite001_BUMP_2K.jpg");
