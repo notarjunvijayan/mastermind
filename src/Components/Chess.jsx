@@ -135,7 +135,7 @@ export default function Chess() {
                 <footer>
                   Product of Mastermind Chess Academy | Made By{" "}
                   <a href="https://www.notarjunvijayan.me/">Arjun Vijayan</a>{" "}
-                  and <a href="#">Yadhu Krishnan A S</a>
+                  and <a href="https://www.linkedin.com/in/yadukrishnan-a-s/">Yadukrishnan A S</a>
                 </footer>
               </div>
             </div>
